@@ -23,6 +23,16 @@
         <div> {{ user.name }} </div>
         <div> {{ user.email }}</div>
         <div>
+          <span>
+            <a class="btn-floating btn-large waves-effect waves-light green">
+              <router-link :to="{ name: 'EditUser', params: {user_id: user.id}}">
+                <i class="material-icons">mode_edit</i>
+              </router-link>
+            </a>
+
+          </span>
+        </div>
+        <div>
           <i @click="deleteUser(user.id)" class="material-icons">delete</i>
         </div>
       </div>
